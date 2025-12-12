@@ -903,3 +903,26 @@ h2.section-title::after {
     color: var(--color-primary); 
     font-weight: 700;
 }
+.hero-section {
+  position: relative;
+  height: 100vh; /* full screen height */
+  background-image: url("images/hero-bg.jpg"); /* path to your image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
