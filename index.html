@@ -363,8 +363,21 @@
                      <input type="text" name="name" placeholder="Your Name" required>
                      <input type="email" name="email" placeholder="Your Email" required>
                      <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
+
+                     <script src="https://www.google.com/recaptcha/api.js?render=6Le5ISksAAAAAGwCb4RHA8k0NA2Fjf_JpG23eCXe"></script>
+
+                     <input type="hidden" name="recaptcha_token" id="recaptchaToken">
                      
                      <button type="submit">Send</button>
+
+                     <script>
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6Le5ISksAAAAAGwCb4RHA8k0NA2Fjf_JpG23eCXe', {action: 'submit'}).then(function(token) {
+                    // Place the generated token into the hidden input field above
+                    document.getElementById('recaptchaToken').value = token;
+                });
+            });
+        </script>
                  </form>
 
                  </div>
