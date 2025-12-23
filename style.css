@@ -1075,3 +1075,74 @@ h2.section-title::after {
   color: #5dade2;       /* Lighter blue for better visibility on dark */
   margin: 0;
 }
+/* 1. Header Container - Stays only at the top of the page */
+.main-header {
+  position: absolute;    /* Stays at the top, does NOT follow scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column; /* Stacks logo and nav for better centering */
+  align-items: center;    /* Centers everything horizontally */
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 2. Logo Sizing - Prevents it from being too large */
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px; /* Space between logo and menu */
+}
+
+.site-logo {
+  height: 55px; /* Adjust this to make logo smaller/larger */
+  width: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-title {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #222;
+  margin: 0;
+}
+
+.company-tagline {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #1a4a8e;
+  margin: 0;
+}
+
+/* 3. Navigation - Perfectly Center Aligned */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  justify-content: center; /* Centers the links */
+  width: 100%;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #1a4a8e;
+}
