@@ -938,3 +938,31 @@ h2.section-title::after {
 .footer-form textarea {
     resize: vertical; /* Allows users to resize vertically but not horizontally */
 }
+/* Container for the menu links */
+.nav-menu-selector { 
+  display: flex;
+  align-items: center; /* This vertically centers "Home" with "Our Services" */
+  justify-content: center; /* Centers the whole menu on the page */
+  gap: 20px; /* Adjust spacing between menu items */
+}
+
+/* Ensure text doesn't break into two lines */
+.nav-menu-selector a {
+  white-space: nowrap; 
+  display: inline-block;
+  vertical-align: middle;
+}
+/* The subtitle "Building Maintenance and Renovations" */
+.footer-logo-section h4, 
+.footer-logo-section p {
+  font-size: 10px;
+  line-height: 1.4;
+  margin-top: 4px; /* Space below the company name */
+  color: #cccccc; /* Optional: slightly dim the color for better hierarchy */
+}
+
+/* The "EST. 2010 | ABN" line */
+.footer-abn-text {
+  font-size: 10px;
+  margin-top: 10px;
+}
