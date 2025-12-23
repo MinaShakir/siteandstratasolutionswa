@@ -957,42 +957,107 @@ h2.section-title::after {
     white-space: nowrap !important; 
     display: inline-block !important;
 }
-
-.nav-menu a:hover {
-  color: #1a4a8e;
+/* Header stays at top and moves away when scrolling */
+header.main-header {
+    position: absolute !important; 
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important; /* Vertically center logo and nav */
+    justify-content: space-between !important;
+    background: #ffffff !important;
+    padding: 10px 40px !important;
+    box-sizing: border-box !important;
+    z-index: 100 !important;
 }
-/* FORCE THE HEADER TO THE TOP ONLY */
-body header.main-header {
-    position: relative !important; 
+
+/* LEFT SIDE: Logo and Company Name aligned together */
+.brand-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex: 1 !important; /* Takes up space on the left */
+}
+
+.site-logo {
+    height: 45px !important; /* Matches text height perfectly */
+    width: auto !important;
+}
+
+.brand-text {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    width: 100% !important;
-    background: #fff !important;
-    padding: 20px 0 !important;
-    top: 0 !important;
 }
 
-/* FORCE LOGO SIZE TO MATCH TEXT (Image 2 style) */
-body .brand-container {
-    display: flex !important;
-    align-items: center !important;
-    gap: 15px !important;
-    margin-bottom: 20px !important;
+.brand-text h1 {
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    margin: 0 !important;
+    line-height: 1.1 !important;
 }
 
-body img.site-logo {
-    height: 50px !important; /* Force small height */
-    width: auto !important;
-    max-width: none !important;
+.brand-text p {
+    font-size: 13px !important;
+    color: #1a4a8e !important;
+    margin: 0 !important;
 }
 
-/* FORCE NAVIGATION TO CENTER */
-body .nav-menu {
+/* CENTER: Navigation Links */
+.nav-menu {
     display: flex !important;
     justify-content: center !important;
-    width: 100% !important;
-    gap: 30px !important;
+    flex: 2 !important; /* Takes up the most space to stay centered */
     list-style: none !important;
+    gap: 20px !important;
+    margin: 0 !important;
     padding: 0 !important;
+}
+
+/* Placeholder to balance the right side so Nav stays centered */
+.header-right-spacer {
+    flex: 1 !important;
+}
+/* Main Footer Layout */
+footer.main-footer {
+    display: flex !important;
+    flex-direction: column !important; /* Stacks Brand over Links */
+    align-items: center !important;
+    padding: 50px 20px !important;
+    background-color: #222 !important;
+    text-align: center !important;
+}
+
+/* FORCE FOOTER LOGO SMALL */
+footer .footer-logo, 
+footer img {
+    height: 45px !important; /* Forced small size */
+    width: auto !important;
+    margin-bottom: 10px !important;
+}
+
+/* Footer Description */
+.footer-description {
+    max-width: 600px !important;
+    margin-bottom: 30px !important;
+    color: #ccc !important;
+}
+
+/* COLUMNS BELOW: Service, Connect, Company */
+.footer-columns-wrapper {
+    display: flex !important;
+    flex-direction: row !important; /* Keeps headers side-by-side */
+    justify-content: center !important;
+    gap: 60px !important;
+    width: 100% !important;
+    border-top: 1px solid #444 !important;
+    padding-top: 30px !important;
+}
+
+/* Make headers very visible */
+.footer-columns-wrapper h4 {
+    color: #ff4500 !important; /* Bright orange for visibility */
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 15px !important;
 }
