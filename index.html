@@ -52,14 +52,15 @@
                 </div>
             </div>
         </div>
-        <nav class="main-nav">
-            <div class="container">
-                <a href="#" class="logo">
-                    <img src="images/sitenstratasolutionslogosmall.png" alt="Site & Strata Solutions Logo">
-                    <div class="logo-text-wrapper">
-                        <h1>Site & Strata Solutions WA</h1>
-                        <h2>Building Maintenance and Renovations</h2>
-                    </div>
+        <header class="site-header">
+    <div class="container header-content">
+        <div class="logo-group">
+            <img src="images/Site and strata logo.png" alt="Site & Strata Solutions Logo" class="logo-img">
+            <div class="branding">
+                <h1 class="site-title">Site & Strata Solutions WA</h1>
+                <p class="site-tagline">BUILDING MAINTENANCE AND RENOVATIONS</p>
+            </div>
+        </div>
                 </a>
                 <button class="hamburger-menu" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
@@ -309,67 +310,54 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <a href="#" class="logo-footer">
-                        <img src="sitenstratasolutionslogosmall.png" alt="Site & Strata Solutions Logo">
-                        <div class="logo-text-wrapper">
-                            <h3>Site & Strata Solutions WA</h3>
-                            <h4>Building Maintenance and Renovations</h4>
-                        </div>
-                    </a>
-                    <p class="footer-about-text">Specializing in commercial, residential, and strata building maintenance & renovations across Perth regions since 2010. Quality, reliability, and expertise in every project.</p>
-                    <p class="est-abn-footer">EST. 2010 | ABN: 62 942 893 580</p>
+    <div class="container footer-grid">
+        <div class="footer-branding">
+            <div class="logo-group">
+                <img src="images/Site and strata logo.png" alt="Logo" class="footer-logo">
+                <div class="branding">
+                    <h2 class="footer-title">Site & Strata Solutions WA</h2>
+                    <p class="footer-tagline">Building Maintenance and Renovations</p>
                 </div>
-                <div class="footer-column">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Repairs & Maintenance</a></li>
-                        <li><a href="#services">Renovations & Painting</a></li>
-                        <li><a href="#services">Installations</a></li>
-                        <li><a href="#ndis">NDIS Home Modifications</a></li>
-                        <li><a href="#">Emergency Services</a></li>
-                    </ul>
+            </div>
+            <p class="footer-desc">
+                Specializing in commercial, residential, and strata building maintenance & renovations across Perth regions since 2010. Quality, reliability, and expertise in every project.
+            </p>
+            <p class="footer-abn">EST. 2010 | ABN: 62 942 893 580</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="#">Repairs & Maintenance</a></li>
+                <li><a href="#">Renovations & Painting</a></li>
+                <li><a href="#">Installations</a></li>
+                <li><a href="#">NDIS Home Modifications</a></li>
+                <li><a href="#">Emergency Services</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Portfolio</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Get a Quote</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Connect</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Serving All Perth Regions, WA</p>
+            <p><i class="fas fa-phone"></i> 0401 544 111</p>
+            <p><i class="fas fa-envelope"></i> enquiries@sitenstrata.com</p>
+            <div class="social-icons">
                 </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#portfolio">Our Portfolio</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Get a Quote</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div> 
-             <div class="footer-column contact-info-footer">
-                 <h4>Connect</h4>
-                 <p><i class="fas fa-map-marker-alt"></i> Serving All Perth Regions, WA</p>
-                 <p><i class="fas fa-phone-alt"></i> <a href="tel:0401544111">0401 544 111</a></p>
-                 <p><i class="fas fa-envelope"></i> <a href="mailto:enquiries@sitenstrata.com">enquiries@sitenstrata.com</a></p>
-                 <div class="social-links">
-                     <a href="https://www.facebook.com/siteandstratasolutions" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                         <i class="fab fa-facebook-f"></i>
-                     </a>
-                     <a href="https://www.instagram.com/sitestratasolutions" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                         <i class="fab fa-instagram"></i>
-                     </a>
-                 </div>
-                 
-                 <h4 style="margin-top: 20px;">Quick Enquiry</h4> 
-
-                 <form action="send_email.php" method="POST" class="footer-form">
-                     <input type="text" name="name" placeholder="Your Name" required>
-                     <input type="email" name="email" placeholder="Your Email" required>
-                     <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
-
-                     <script src="https://www.google.com/recaptcha/api.js?render=6Le5ISksAAAAAGwCb4RHA8k0NA2Fjf_JpG23eCXe"></script>
-
-                     <input type="hidden" name="recaptcha_token" id="recaptchaToken">
-                     
-                     <button type="submit">Send</button>
-
+        </div>
+    </div>
+</footer>
+                
                      <script>
             grecaptcha.ready(function() {
                 grecaptcha.execute('6Le5ISksAAAAAGwCb4RHA8k0NA2Fjf_JpG23eCXe', {action: 'submit'}).then(function(token) {
