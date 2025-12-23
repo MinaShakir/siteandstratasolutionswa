@@ -977,3 +977,85 @@ h2.section-title::after {
     text-transform: uppercase;
     color: #555; /* Optional: makes it look more professional */
 }
+/* --- ALIGNMENT FIXES --- */
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.branding {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.site-title, .footer-title {
+    white-space: nowrap !important; /* Forces Name on one line */
+    margin: 0 !important;
+    font-size: 1.4rem;
+    color: #333; /* Dark font for visibility */
+}
+
+.site-tagline, .footer-tagline {
+    font-size: 10px !important; /* Size 10 as requested */
+    margin: 0 !important;
+    text-transform: uppercase;
+    color: #666;
+}
+
+/* --- NAVIGATION FIX --- */
+.nav-links {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Forces Home, Our Services, etc. on one line */
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li a {
+    white-space: nowrap !important;
+}
+
+/* --- WHITE FOOTER STYLES --- */
+.site-footer {
+    background-color: #ffffff !important; /* White background */
+    color: #333333 !important; /* Dark text */
+    padding: 50px 0;
+    border-top: 1px solid #eeeeee;
+}
+
+.footer-column h3 {
+    color: #000000;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.footer-column ul li a, 
+.footer-column p {
+    color: #444444 !important; /* Darker grey for links and text */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stacks columns on mobile */
+        text-align: center;
+    }
+    
+    .logo-group {
+        justify-content: center;
+    }
+    
+    .nav-links {
+        flex-direction: column; /* Menu stacks on mobile */
+        align-items: center;
+    }
+}
