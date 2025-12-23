@@ -957,96 +957,95 @@ h2.section-title::after {
     white-space: nowrap !important; 
     display: inline-block !important;
 }
-/* Header stays at top and moves away when scrolling */
+/* HEADER: Stays at the top and moves away when scrolling */
 header.main-header {
-    position: absolute !important; 
-    top: 0 !important;
-    left: 0 !important;
+    position: relative !important; /* Changed from absolute to ensure it stays in document flow */
     width: 100% !important;
     display: flex !important;
-    align-items: center !important; /* Vertically center logo and nav */
+    align-items: center !important;
     justify-content: space-between !important;
     background: #ffffff !important;
-    padding: 10px 40px !important;
+    padding: 15px 40px !important;
     box-sizing: border-box !important;
     z-index: 100 !important;
 }
 
-/* LEFT SIDE: Logo and Company Name aligned together */
+/* LEFT SIDE: Logo and Company Name */
 .brand-container {
     display: flex !important;
     align-items: center !important;
     gap: 12px !important;
-    flex: 1 !important; /* Takes up space on the left */
+    flex: 1 !important; 
 }
 
 .site-logo {
-    height: 45px !important; /* Matches text height perfectly */
+    height: 45px !important; 
     width: auto !important;
-}
-
-.brand-text {
-    display: flex !important;
-    flex-direction: column !important;
 }
 
 .brand-text h1 {
     font-size: 18px !important;
     font-weight: 800 !important;
     margin: 0 !important;
-    line-height: 1.1 !important;
+    color: #000000 !important; /* Ensure black for visibility */
 }
 
-.brand-text p {
-    font-size: 13px !important;
-    color: #1a4a8e !important;
-    margin: 0 !important;
-}
-
-/* CENTER: Navigation Links */
+/* CENTER: Navigation Links (Fixing visibility) */
 .nav-menu {
     display: flex !important;
     justify-content: center !important;
-    flex: 2 !important; /* Takes up the most space to stay centered */
+    flex: 2 !important; 
     list-style: none !important;
     gap: 20px !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-/* Placeholder to balance the right side so Nav stays centered */
-.header-right-spacer {
-    flex: 1 !important;
+.nav-menu a {
+    text-decoration: none !important;
+    color: #333333 !important; /* Ensure color is defined */
+    font-weight: 600 !important;
+    visibility: visible !important; /* Force visibility */
 }
-/* Main Footer Layout */
+
+/* Spacer for perfect centering */
+.header-right-spacer { flex: 1 !important; }
+
+/* FOOTER LAYOUT: Logo, Name, then Columns below */
 footer.main-footer {
     display: flex !important;
-    flex-direction: column !important; /* Stacks Brand over Links */
+    flex-direction: column !important;
     align-items: center !important;
     padding: 50px 20px !important;
-    background-color: #222 !important;
+    background-color: #222222 !important; /* Dark background */
     text-align: center !important;
 }
 
-/* FORCE FOOTER LOGO SMALL */
-footer .footer-logo, 
-footer img {
-    height: 45px !important; /* Forced small size */
+/* FOOTER LOGO: Forced small size */
+footer .footer-logo, footer img {
+    height: 45px !important;
     width: auto !important;
     margin-bottom: 10px !important;
 }
 
-/* Footer Description */
-.footer-description {
-    max-width: 600px !important;
-    margin-bottom: 30px !important;
-    color: #ccc !important;
+/* FOOTER COMPANY NAME: Visible White Text */
+.footer-company-name {
+    color: #ffffff !important; 
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    margin: 0 !important;
 }
 
-/* COLUMNS BELOW: Service, Connect, Company */
+/* FOOTER SUBTITLE: Visible Blue Text */
+.footer-subtitle {
+    color: #5dade2 !important; /* Lighter blue for visibility on dark bg */
+    font-size: 14px !important;
+    margin: 5px 0 30px 0 !important;
+}
+
+/* COLUMNS: Below the branding */
 .footer-columns-wrapper {
     display: flex !important;
-    flex-direction: row !important; /* Keeps headers side-by-side */
     justify-content: center !important;
     gap: 60px !important;
     width: 100% !important;
@@ -1054,10 +1053,7 @@ footer img {
     padding-top: 30px !important;
 }
 
-/* Make headers very visible */
 .footer-columns-wrapper h4 {
-    color: #ff4500 !important; /* Bright orange for visibility */
-    font-size: 16px !important;
-    text-transform: uppercase !important;
-    margin-bottom: 15px !important;
+    color: #ff4500 !important; /* Orange headers */
+    font-weight: bold !important;
 }
