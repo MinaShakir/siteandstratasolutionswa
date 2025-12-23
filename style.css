@@ -1037,3 +1037,41 @@ h2.section-title::after {
   margin: 0;
   margin-top: 2px;
 }
+/* Footer Container */
+.footer-branding {
+  display: flex;
+  align-items: center;  /* Vertically aligns logo and text */
+  justify-content: center; /* Centers the whole block in the footer */
+  gap: 12px;            /* Small gap between logo and text */
+  padding: 20px 0;
+  background-color: #333; /* Typical dark footer background */
+}
+
+/* RESIZE THE LOGO HERE */
+.footer-logo {
+  height: 40px;         /* Smaller size for footer use */
+  width: auto;          /* Maintains proportions */
+  display: block;
+}
+
+/* Footer Text Styles */
+.footer-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-company-name {
+  font-family: Arial, sans-serif;
+  font-size: 18px;      /* Reduced size for footer */
+  font-weight: 700;
+  color: #ffffff;       /* White text for dark footer */
+  margin: 0;
+  line-height: 1.2;
+}
+
+.footer-tagline {
+  font-family: Arial, sans-serif;
+  font-size: 14px;      /* Smaller tagline */
+  color: #5dade2;       /* Lighter blue for better visibility on dark */
+  margin: 0;
+}
