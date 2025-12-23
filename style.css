@@ -937,32 +937,37 @@ h2.section-title::after {
 }
 .footer-form textarea {
     resize: vertical; /* Allows users to resize vertically but not horizontally */
-}
-/* Container for the menu links */
-.nav-menu-selector { 
-  display: flex;
-  align-items: center; /* This vertically centers "Home" with "Our Services" */
-  justify-content: center; /* Centers the whole menu on the page */
-  gap: 20px; /* Adjust spacing between menu items */
+
+/* Force the menu list to stay in one horizontal line */
+.nav-links {
+  display: flex !important;
+  flex-wrap: nowrap !important; 
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px; /* Adjust this number to change space between links */
 }
 
-/* Ensure text doesn't break into two lines */
-.nav-menu-selector a {
-  white-space: nowrap; 
-  display: inline-block;
-  vertical-align: middle;
+/* Prevent text like "Our Services" from breaking into two lines */
+.nav-links li a {
+  white-space: nowrap !important;
+  display: inline-block !important;
 }
-/* The subtitle "Building Maintenance and Renovations" */
+
+/* Targets the "Building Maintenance and Renovations" text in the footer */
 .footer-logo-section h4, 
-.footer-logo-section p {
-  font-size: 10px;
-  line-height: 1.4;
-  margin-top: 4px; /* Space below the company name */
-  color: #cccccc; /* Optional: slightly dim the color for better hierarchy */
+.footer-logo-section p,
+.footer-logo-section .site-description {
+  font-size: 10px !important;
+  display: block !important; /* Moves it to the next line below the name */
+  margin-top: 5px !important;
+  line-height: 1.2 !important;
+  font-weight: 400 !important;
+  text-transform: uppercase; /* Optional: matches the professional look */
 }
 
-/* The "EST. 2010 | ABN" line */
-.footer-abn-text {
-  font-size: 10px;
-  margin-top: 10px;
+/* Ensure the main company name stays as a block above it */
+.footer-logo-section h2, 
+.footer-logo-section .site-title {
+  display: block !important;
+  margin-bottom: 0 !important;
 }
