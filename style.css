@@ -222,7 +222,7 @@ h2.section-title::after {
  * HERO SECTION
  */
 .hero-section {
-    background: url('images/homerenovation.jpg') no-repeat center center/cover;
+    background: url('/images/homerenovation.jpg') no-repeat center center/cover;
     height: 60vh;
     display: flex;
     align-items: center;
@@ -970,4 +970,31 @@ h2.section-title::after {
 .footer-logo-section .site-title {
   display: block !important;
   margin-bottom: 0 !important;
+}
+/* Ensure the navigation container allows items to sit side-by-side */
+.nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important; /* Forces one single line */
+  align-items: center !important;
+  justify-content: flex-end !important; /* Aligns menu to the right */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Force the individual links to stay on one line */
+.nav-links li a {
+  white-space: nowrap !important; /* THIS stops the text wrapping */
+  display: inline-block !important;
+  padding: 0 10px !important; /* Adjust spacing between menu items */
+  font-size: 14px; /* Adjust if the text is still too crowded */
+}
+/* Targets the "Building Maintenance and Renovations" part */
+.site-header .logo + div p, 
+footer .company-info p {
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  display: block !important;
 }
