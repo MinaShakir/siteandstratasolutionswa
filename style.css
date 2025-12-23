@@ -998,3 +998,42 @@ h2.section-title::after {
   color: #1a4a8e;        /* The blue from your image */
   margin: 0;
 }
+/* Container to align image and text side-by-side */
+.brand-container {
+  display: flex;
+  align-items: center; /* Vertically centers text with the logo */
+  gap: 15px;           /* Sets the space between logo and text */
+  padding: 10px 20px;
+}
+
+/* FIX: This prevents the logo from blowing up and blocking the site */
+.site-logo {
+  height: 70px;        /* Set a fixed height that fits your header */
+  width: auto;         /* Keeps the logo proportional */
+  display: block;
+}
+
+/* Stack the two lines of text vertically */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.company-title {
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 800;    /* Extra bold like the image */
+  color: #222;
+  margin: 0;           /* Removes default spacing that breaks alignment */
+  line-height: 1.1;
+}
+
+.company-tagline {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #1a4a8e;      /* Matching the blue tagline color */
+  margin: 0;
+  margin-top: 2px;
+}
