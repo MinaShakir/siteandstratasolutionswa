@@ -1157,3 +1157,29 @@ footer .footer-logo, footer img {
         margin-bottom: 15px;
     }
 }
+@media screen and (max-width: 768px) {
+    /* Reduce header padding to save space */
+    .site-header {
+        padding: 10px 0;
+    }
+
+    /* Compress the logo size so the menu can fit next to it or right below */
+    .logo img {
+        max-height: 40px; 
+    }
+
+    /* Make the navigation links horizontal and small */
+    .nav-menu {
+        display: flex;
+        flex-direction: row; /* Keep items in a row */
+        justify-content: center;
+        flex-wrap: wrap;    /* Wrap to a second line if there are too many */
+        gap: 10px;          /* Space between Home, About Us, etc. */
+        padding: 5px 0;
+    }
+
+    .nav-menu a {
+        font-size: 13px;    /* Smaller text for mobile */
+        padding: 5px 8px;
+    }
+}
