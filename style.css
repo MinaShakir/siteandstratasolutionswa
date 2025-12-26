@@ -1156,58 +1156,73 @@ footer .footer-logo, footer img {
         justify-content: center !important;
     }
 }
-/* MOBILE FIX - BOTTOM OF CSS */
-@media (max-width: 768px) {
-    /* 1. Fix the Header Overlap */
-    .site-header {
-        position: relative !important; /* Prevents content from sliding under header */
-        background-color: #ffffff !important;
-    }
+/* --- MOBILE VIEWPORT REPAIR --- */
 
-    /* 2. Fix the Navigation Overlap */
-    .nav-links {
-        display: none !important; /* Hide the row that was forced by !important */
-        flex-direction: column !important;
-        width: 100% !important;
-        background: #ffffff !important;
-        position: absolute !important;
-        top: 100%;
-        left: 0;
-        z-index: 9999 !important;
-        gap: 0 !important;
-    }
+/* 1. Prevent the website from shaking/scrolling sideways */
+html, body {
+  overflow-x: hidden !important;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    /* 3. Show Navigation only when Active */
-    .nav-links.active {
-        display: flex !important;
-        padding: 20px !important;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    }
+/* 2. Fix the Navigation Overlap (The NDIS/Portfolio links) */
+/* This forces the menu to wrap or scroll instead of overlapping the logo */
+.nav-container, .menu-links, [class*="menu"] { 
+  position: relative !important;
+  display: flex;
+  flex-wrap: wrap; /* Allows links to move to a second line if too long */
+  justify-content: center;
+  background: #ffffff; /* Gives it a solid background */
+  padding: 10px 0;
+  z-index: 99;
+}
 
-    .nav-links li {
-        width: 100% !important;
-        text-align: left !important;
-        border-bottom: 1px solid #eee;
-    }
+/* 3. Global Padding (Stops text from touching the screen edges) */
+section, .container, .content-area {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
 
-    /* 4. Fix Hero Text size so it doesn't overflow */
-    .hero-content h1 {
-        font-size: 2rem !important;
-        line-height: 1.2 !important;
-    }
+/* 4. Fix Images & Portfolio items (Stops them from being too wide) */
+img, video, .portfolio-item, .wp-block-image {
+  max-width: 100% !important;
+  height: auto !important;
+}
 
-    /* 5. Fix Service Area Columns */
-    .area-list {
-        columns: 1 !important; /* Single column on mobile for readability */
-        -webkit-columns: 1 !important;
-        padding-left: 20px !important;
-    }
-    
-    /* 6. Fix Top Bar spacing */
-    .top-contact {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        gap: 5px !important;
-    }
+/* 5. Fix the Service Areas List (The 2-column list in the video) */
+/* This makes the list of suburbs stack nicely on mobile */
+@media (max-width: 600px) {
+  .service-areas-list, [class*="area"] ul {
+    column-count: 1 !important; /* Forces single column if screen is narrow */
+    display: block !important;
+  }
+  
+  /* Make the "Get a Quote" buttons full width for easier clicking */
+  .button, .btn, [class*="button"] {
+    display: block !important;
+    width: 100% !important;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+/* 6. Cookie Consent Bar Fix */
+/* Ensures the cookie notice stays at the very bottom and doesn't block the nav */
+#cookie-law-info-bar, .cookie-notice {
+  position: fixed !important;
+  bottom: 0 !important;
+  top: auto !important;
+  z-index: 9999;
+}
+
+/* 7. Header Top Bar (The red emergency bar) */
+/* Ensures it doesn't get cut off */
+.top-header, .emergency-bar {
+  width: 100% !important;
+  font-size: 12px !important;
+  padding: 5px 0;
 }
