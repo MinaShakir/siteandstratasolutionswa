@@ -1183,3 +1183,7 @@ footer .footer-logo, footer img {
         padding: 5px 8px;
     }
 }
+/* Temporarily hide the error message area */
+.error-message, .gm-err-container {
+    display: none !important;
+}
