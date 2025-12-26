@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LevHDcsAAAAABmxoVTzWAWL65uJK2dm5hnC-_bI
+"></script>
     
     <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
     
@@ -73,9 +75,8 @@
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#primary-services">Our Services</a></li> 
-                    <li><a href="#ndis">NDIS</a></li>
-                    <li><a href="#about">About Us</a></li>         
-                    <li><a href="blog/blog.html">Blog</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#ndis">NDIS</a></li>         
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact Us</a></li>
@@ -99,7 +100,7 @@
         
         <section id="primary-services" class="primary-services">
             <div class="container">
-                <h2 class="section-title">Specialised Building Solutions</h2>
+                <h2 class="section-title">Our Services</h2>
                 <div class="service-links-grid">
                     <a href="services-maintenance.html" class="service-card fade-in-on-scroll">
                         <i class="fas fa-tools"></i>
@@ -163,18 +164,6 @@
                     <p>We work closely with participants, families, and support coordinators to provide reliable and tailored property solutions that align with NDIS plan goals, including accessible bathroom renovations, ramp installations, grab rail fitting, widening doorways, and general home modifications.</p>
                     <p><strong>NDIS Provider Number: 4-JD66R8N</strong></p>
                     <a href="#contact" class="btn-primary">Enquire About NDIS Services</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog-preview" class="blog-preview">
-            <div class="container">
-                <h2 class="section-title">Latest Insights from Our Blog</h2>
-                <p class="section-subtitle">Stay updated with our tips on property maintenance and building solutions.</p>
-                <div class="blog-card fade-in-on-scroll">
-                    <h3 class="blog-title">The Proactive Property Owner's Guide</h3>
-                    <p class="blog-excerpt">Discover a comprehensive seasonal preventive maintenance checklist for your property and building...</p>
-                    <a href="blog/blog.html" class="btn-secondary">Read More</a>
                 </div>
             </div>
         </section>
@@ -301,10 +290,10 @@
                                 <label for="message">Your Message / Project Details</label>
                                 <textarea id="message" name="message" rows="5" required></textarea>
                             </div>
-                            
+
                             <div class="g-recaptcha-placeholder">
-                                <p>[ **reCAPTCHA v2 / v3 Integration Goes Here** ]</p>
-                            </div>
+                                <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+                           </div>
 
                             <button type="submit" class="btn-primary">Request a Free Quote</button>
                         </form>
@@ -361,17 +350,24 @@
                 </div>
         </div>
     </div>
-</footer>
-                
-                     <script>
+</footer> 
+                 
+             <script>
+             document.querySelector('.contact-form').addEventListener('submit', function(e) {
+             e.preventDefault(); // Stop the form for a second
+    
             grecaptcha.ready(function() {
-                grecaptcha.execute('6Le5ISksAAAAAGwCb4RHA8k0NA2Fjf_JpG23eCXe', {action: 'submit'}).then(function(token) {
-                    // Place the generated token into the hidden input field above
-                    document.getElementById('recaptchaToken').value = token;
-                });
-            });
-        </script>
-                 </form>
+            // Replace YOUR_SITE_KEY with your actual site key
+            grecaptcha.execute('6LevHDcsAAAAABmxoVTzWAWL65uJK2dm5hnC-_bI
+', {action: 'submit'}).then(function(token) {
+            // This line fills the hidden input you created at line 294
+            document.getElementById('recaptcha_token').value = token;
+            // Now it sends the form to your PHP script
+            e.target.submit();
+           });
+          });
+         });
+    </script>
 
                  </div>
                 </div>
