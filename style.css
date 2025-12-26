@@ -1057,3 +1057,110 @@ footer .footer-logo, footer img {
     color: #ff4500 !important; /* Orange headers */
     font-weight: bold !important;
 }
+/* REVISED FOOTER LAYOUT */
+footer.main-footer {
+    background-color: #000000 !important; /* True black background */
+    color: #ffffff !important; /* Force all general text to white */
+    padding: 60px 20px 30px !important;
+    text-align: left !important; /* Left aligned for professional column look */
+}
+
+/* 3-Column Wrapper */
+.footer-columns-wrapper {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    gap: 40px !important;
+}
+
+/* Individual Column Styling */
+.footer-column {
+    flex: 1 !important;
+    min-width: 280px !important; /* Responsive stacking for mobile */
+}
+
+/* Column 1: Branding Specifics */
+.footer-column .footer-logo {
+    height: 50px !important;
+    width: auto !important;
+    margin-bottom: 15px !important;
+    display: block !important;
+}
+
+.footer-company-name {
+    color: #ffffff !important; /* Ensures name is visible */
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    margin-bottom: 5px !important;
+    display: block !important;
+}
+
+.footer-subtitle {
+    color: #5dade2 !important; /* Light blue subtitle for contrast */
+    font-size: 14px !important;
+    margin-bottom: 20px !important;
+    display: block !important;
+}
+
+/* Headings in Columns */
+.footer-column h4 {
+    color: var(--color-primary) !important; /* Uses your #E94E1B Orange */
+    font-size: 1.1em !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    margin-bottom: 20px !important;
+    border-bottom: 1px solid #333 !important;
+    padding-bottom: 10px !important;
+}
+
+/* Footer Links & Lists */
+.footer-column ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px !important;
+}
+
+.footer-column a {
+    color: #cccccc !important;
+    text-decoration: none !important;
+    transition: color 0.3s !important;
+}
+
+.footer-column a:hover {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+/* Contact Info Icons */
+.footer-column p {
+    margin-bottom: 10px !important;
+    font-size: 0.95em !important;
+    color: #ffffff !important;
+}
+
+/* Footer Bottom Copyright */
+.footer-bottom {
+    text-align: center !important;
+    margin-top: 40px !important;
+    padding-top: 20px !important;
+    border-top: 1px solid #222 !important;
+    font-size: 0.8em !important;
+    color: #777777 !important;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    footer.main-footer {
+        text-align: center !important;
+    }
+    .footer-columns-wrapper {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+}
