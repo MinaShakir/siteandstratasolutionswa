@@ -817,7 +817,7 @@ main, .hero-section {
     }
 
     .nav-links {
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
         display: none;
         order: 3;
@@ -1186,4 +1186,27 @@ footer .footer-logo, footer img {
 /* Temporarily hide the error message area */
 .error-message, .gm-err-container {
     display: none !important;
+}
+@media screen and (max-width: 768px) {
+    /* 1. This stops the header from blocking the page */
+    .site-header {
+        position: relative !important;
+        padding: 10px 0 !important;
+    }
+
+    /* 2. This compresses the menu into a horizontal row */
+    .nav-links {
+        display: flex !important;
+        flex-direction: row !important; /* Forces Home, About, etc. to be side-by-side */
+        flex-wrap: wrap !important;     /* Allows a second row if it's too tight */
+        justify-content: center !important;
+        gap: 8px !important;            /* Tightens space between links */
+        padding: 5px 0 !important;
+    }
+
+    /* 3. Make the text smaller so it fits */
+    .nav-links a {
+        font-size: 12px !important;
+        padding: 4px 6px !important;
+    }
 }
