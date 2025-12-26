@@ -1156,3 +1156,58 @@ footer .footer-logo, footer img {
         justify-content: center !important;
     }
 }
+/* MOBILE FIX - BOTTOM OF CSS */
+@media (max-width: 768px) {
+    /* 1. Fix the Header Overlap */
+    .site-header {
+        position: relative !important; /* Prevents content from sliding under header */
+        background-color: #ffffff !important;
+    }
+
+    /* 2. Fix the Navigation Overlap */
+    .nav-links {
+        display: none !important; /* Hide the row that was forced by !important */
+        flex-direction: column !important;
+        width: 100% !important;
+        background: #ffffff !important;
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        z-index: 9999 !important;
+        gap: 0 !important;
+    }
+
+    /* 3. Show Navigation only when Active */
+    .nav-links.active {
+        display: flex !important;
+        padding: 20px !important;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links li {
+        width: 100% !important;
+        text-align: left !important;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* 4. Fix Hero Text size so it doesn't overflow */
+    .hero-content h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    /* 5. Fix Service Area Columns */
+    .area-list {
+        columns: 1 !important; /* Single column on mobile for readability */
+        -webkit-columns: 1 !important;
+        padding-left: 20px !important;
+    }
+    
+    /* 6. Fix Top Bar spacing */
+    .top-contact {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 5px !important;
+    }
+}
