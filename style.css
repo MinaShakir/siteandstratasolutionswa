@@ -110,7 +110,7 @@ h2.section-title::after {
  * HEADER & NAVIGATION
  */
 .site-header {
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
     transition: background-color 0.3s;
