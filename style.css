@@ -283,10 +283,12 @@ main, .hero-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    align-items: stretch; /* This forces all cards in a row to match the tallest one */
 }
 
 .service-card {
-    display: block;
+    display: flex;          /* Changed from block */
+    flex-direction: column; /* Stacks content top-to-bottom */
     background-color: var(--color-white);
     padding: 30px;
     border-radius: 8px;
@@ -295,11 +297,13 @@ main, .hero-section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
+    height: 100%;           /* Fill the grid height */
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+.service-card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    flex-grow: 1;           /* THIS IS THE TRICK: It grows to fill extra space, pushing the link down */
 }
 
 .service-card i {
