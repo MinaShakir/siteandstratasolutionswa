@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LevHDcsAAAAABmxoVTzWAWL65uJK2dm5hnC-_bI
 "></script>
     
     <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
@@ -354,25 +353,7 @@
         </div>
     </div>
 </footer> 
-                 
-             <script>
-             document.querySelector('.contact-form').addEventListener('submit', function(e) {
-             e.preventDefault(); // Stop the form for a second
-    
-            grecaptcha.ready(function() {
-            // Replace YOUR_SITE_KEY with your actual site key
-            grecaptcha.execute('6LevHDcsAAAAABmxoVTzWAWL65uJK2dm5hnC-_bI
-', {action: 'submit'}).then(function(token) {
-            // This line fills the hidden input you created at line 294
-            document.getElementById('recaptcha_token').value = token;
-            // Now it sends the form to your PHP script
-            e.target.submit();
-           });
-          });
-         });
-    </script>
-
-                 </div>
+        
                 </div>
             </div>
             <div class="footer-bottom">
