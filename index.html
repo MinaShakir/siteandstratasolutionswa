@@ -270,7 +270,7 @@
 
                     <div class="contact-form-col fade-in-on-scroll">
                         <h3>Send Us a Message</h3>
-                        <form action="/submit-form" method="POST" class="contact-form">
+                        <form action="https://formspree.io/f/mgolvqbk" method="POST" class="contact-form">
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" required>
@@ -291,10 +291,9 @@
                                 <textarea id="message" name="message" rows="5" required></textarea>
                             </div>
 
-                            <div class="g-recaptcha-placeholder">
-                                <input type="hidden" name="recaptcha_token" id="recaptcha_token">
-                           </div>
-
+                            <label style="display:none;">
+                                Leave this field empty: <input type="text" name="_gotcha">
+                            </label>
                             <button type="submit" class="btn-primary">Request a Free Quote</button>
                         </form>
                     </div>
