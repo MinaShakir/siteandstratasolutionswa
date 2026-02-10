@@ -319,8 +319,11 @@ main, .hero-section {
 }
 
 .service-card p {
-    font-size: 0.95em;
+    font-size: 0.95rem;
     margin-bottom: 15px;
+    flex-grow: 1; /* Add this line to push the link down */
+    display: flex;
+    align-items: center; /* This centers the text vertically in the extra space */0
 }
 
 .cta-link {
