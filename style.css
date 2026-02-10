@@ -596,15 +596,6 @@ main, .hero-section {
     outline: none;
 }
 
-.g-recaptcha-placeholder {
-    padding: 15px;
-    background-color: #e8e8e8;
-    border: 1px dashed #aaa;
-    text-align: center;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
 /*
  * FOOTER
  */
