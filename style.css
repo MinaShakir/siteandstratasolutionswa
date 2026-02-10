@@ -307,11 +307,6 @@ main, .hero-section {
     color: var(--color-secondary); /* Primary Red-Orange */
     margin-bottom: 15px;
 }
-/* ADD THIS BLOCK to your CSS file to temporarily hide the icon */
-.fa-clipboard-check {
-    /* Hides the icon element completely, removing it from the layout flow. */
-    display: none !important; 
-}
 
 .service-card h3 {
     margin-bottom: 10px;
